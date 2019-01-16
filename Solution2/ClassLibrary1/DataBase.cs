@@ -30,8 +30,9 @@ namespace ClassLibrary2
                     map.Add(col.Name, col.Value);
                 }
 
-                string strConnection1 = string.Format("server={0};user={1};password={2};database={3};", map["server"], map["user"], map["password"], map["database"]);
-                conn.ConnectionString = strConnection1;
+                string strConnection
+                    = string.Format("server={0};user={1};password={2};database={3};", map["server"], map["user"], map["password"], map["database"]);
+                conn.ConnectionString = strConnection;
                 conn.Open();
 
                 return conn;
